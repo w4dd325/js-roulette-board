@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roulette</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 20px;
+        }
+
+        td {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid white;
+            cursor: pointer;
+            font-size: 20px; 
+        }
+
+        #red {
+            background-color: black;
+            color: red;
+        }
+
+        #black {
+            background-color: black;
+            color: white;
+        }
+
+        #green {
+            background-color: black;
+            color: green;
+        }
+        
+        #labels {
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <table id="numberTable">
+        <tr>
+            <td id="green" rowspan="3" onclick="buttonClick(0)">0</td>
+            <td id="red" onclick="buttonClick(3)">3</td>
+            <td id="black" onclick="buttonClick(6)">6</td>
+            <td id="red" onclick="buttonClick(9)">9</td>
+            <td id="red" onclick="buttonClick(12)">12</td>
+            <td id="black" onclick="buttonClick(15)">15</td>
+            <td id="red" onclick="buttonClick(18)">18</td>
+            <td id="red" onclick="buttonClick(21)">21</td>
+            <td id="black" onclick="buttonClick(24)">24</td>
+            <td id="red" onclick="buttonClick(27)">27</td>
+            <td id="red" onclick="buttonClick(30)">30</td>
+            <td id="black" onclick="buttonClick(33)">33</td>
+            <td id="red" onclick="buttonClick(36)">36</td>
+        </tr>
+        <tr>
+            <td id="black" onclick="buttonClick(2)">2</td>
+            <td id="red" onclick="buttonClick(5)">5</td>
+            <td id="black" onclick="buttonClick(8)">8</td>
+            <td id="black" onclick="buttonClick(11)">11</td>
+            <td id="red" onclick="buttonClick(14)">14</td>
+            <td id="black" onclick="buttonClick(17)">17</td>
+            <td id="black" onclick="buttonClick(20)">20</td>
+            <td id="red" onclick="buttonClick(23)">23</td>
+            <td id="black" onclick="buttonClick(26)">26</td>
+            <td id="black" onclick="buttonClick(29)">29</td>
+            <td id="red" onclick="buttonClick(32)">32</td>
+            <td id="black" onclick="buttonClick(35)">35</td>
+        </tr>
+        <tr>
+            <td id="red" onclick="buttonClick(1)">1</td>
+            <td id="black" onclick="buttonClick(4)">4</td>
+            <td id="red" onclick="buttonClick(7)">7</td>
+            <td id="black" onclick="buttonClick(10)">10</td>
+            <td id="black" onclick="buttonClick(13)">13</td>
+            <td id="red" onclick="buttonClick(16)">16</td>
+            <td id="red" onclick="buttonClick(19)">19</td>
+            <td id="black" onclick="buttonClick(22)">22</td>
+            <td id="red" onclick="buttonClick(25)">25</td>
+            <td id="black" onclick="buttonClick(28)">28</td>
+            <td id="black" onclick="buttonClick(31)">31</td>
+            <td id="red" onclick="buttonClick(34)">34</td>
+        </tr>
+    </table>
+
+    <script>
+        function buttonClick(number) {
+            //alert("Button clicked: " + number);
+            // Add your custom logic here for what should happen when a button is clicked
+        }
+    </script>
+
+</body>
+
+</html>
