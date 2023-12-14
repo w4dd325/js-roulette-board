@@ -8,16 +8,19 @@
     <style>
         body {
             background-color: black;
-            display: flex;
+            display: inline;
             align-items: center;
             justify-content: center;
             height: 100vh;
             margin: 0;
         }
 
+        .table-container {
+            margin: 20px;
+        }
+
         table {
             border-collapse: collapse;
-            margin: 20px;
         }
 
         td {
@@ -27,7 +30,7 @@
             vertical-align: middle;
             border: 1px solid white;
             cursor: pointer;
-            font-size: 20px; 
+            font-size: 20px;
         }
 
         #red {
@@ -44,68 +47,287 @@
             background-color: black;
             color: green;
         }
-        
+
         #labels {
             background-color: black;
-            color: white;
+            color: black;
+            font-weight: bold;
         }
-
     </style>
 </head>
 
 <body>
+    <div class="table-container">
 
-    <table id="numberTable">
-        <tr>
-            <td id="green" rowspan="3" onclick="buttonClick(0)">0</td>
-            <td id="red" onclick="buttonClick(3)">3</td>
-            <td id="black" onclick="buttonClick(6)">6</td>
-            <td id="red" onclick="buttonClick(9)">9</td>
-            <td id="red" onclick="buttonClick(12)">12</td>
-            <td id="black" onclick="buttonClick(15)">15</td>
-            <td id="red" onclick="buttonClick(18)">18</td>
-            <td id="red" onclick="buttonClick(21)">21</td>
-            <td id="black" onclick="buttonClick(24)">24</td>
-            <td id="red" onclick="buttonClick(27)">27</td>
-            <td id="red" onclick="buttonClick(30)">30</td>
-            <td id="black" onclick="buttonClick(33)">33</td>
-            <td id="red" onclick="buttonClick(36)">36</td>
-        </tr>
-        <tr>
-            <td id="black" onclick="buttonClick(2)">2</td>
-            <td id="red" onclick="buttonClick(5)">5</td>
-            <td id="black" onclick="buttonClick(8)">8</td>
-            <td id="black" onclick="buttonClick(11)">11</td>
-            <td id="red" onclick="buttonClick(14)">14</td>
-            <td id="black" onclick="buttonClick(17)">17</td>
-            <td id="black" onclick="buttonClick(20)">20</td>
-            <td id="red" onclick="buttonClick(23)">23</td>
-            <td id="black" onclick="buttonClick(26)">26</td>
-            <td id="black" onclick="buttonClick(29)">29</td>
-            <td id="red" onclick="buttonClick(32)">32</td>
-            <td id="black" onclick="buttonClick(35)">35</td>
-        </tr>
-        <tr>
-            <td id="red" onclick="buttonClick(1)">1</td>
-            <td id="black" onclick="buttonClick(4)">4</td>
-            <td id="red" onclick="buttonClick(7)">7</td>
-            <td id="black" onclick="buttonClick(10)">10</td>
-            <td id="black" onclick="buttonClick(13)">13</td>
-            <td id="red" onclick="buttonClick(16)">16</td>
-            <td id="red" onclick="buttonClick(19)">19</td>
-            <td id="black" onclick="buttonClick(22)">22</td>
-            <td id="red" onclick="buttonClick(25)">25</td>
-            <td id="black" onclick="buttonClick(28)">28</td>
-            <td id="black" onclick="buttonClick(31)">31</td>
-            <td id="red" onclick="buttonClick(34)">34</td>
-        </tr>
-    </table>
+        <table id="numberTable">
+            <tr>
+                <td name="button0" id="green" rowspan="3" onclick="buttonClick(0, 'green')">0</td>
+                <td id="red" onclick="buttonClick(3, 'red')">3</td>
+                <td id="black" onclick="buttonClick(6, 'white')">6</td>
+                <td id="red" onclick="buttonClick(9, 'red')">9</td>
+                <td id="red" onclick="buttonClick(12, 'red')">12</td>
+                <td id="black" onclick="buttonClick(15, 'white')">15</td>
+                <td id="red" onclick="buttonClick(18, 'red')">18</td>
+                <td id="red" onclick="buttonClick(21, 'red')">21</td>
+                <td id="black" onclick="buttonClick(24, 'white')">24</td>
+                <td id="red" onclick="buttonClick(27, 'red')">27</td>
+                <td id="red" onclick="buttonClick(30, 'red')">30</td>
+                <td id="black" onclick="buttonClick(33, 'white')">33</td>
+                <td id="red" onclick="buttonClick(36, 'red')">36</td>
+                <td id="labels" name="topRowCount" colspan="2"></td>
+            </tr>
+            <tr>
+                <td id="black" onclick="buttonClick(2, 'white')">2</td>
+                <td id="red" onclick="buttonClick(5, 'red')">5</td>
+                <td id="black" onclick="buttonClick(8, 'white')">8</td>
+                <td id="black" onclick="buttonClick(11, 'white')">11</td>
+                <td id="red" onclick="buttonClick(14, 'red')">14</td>
+                <td id="black" onclick="buttonClick(17, 'white')">17</td>
+                <td id="black" onclick="buttonClick(20, 'white')">20</td>
+                <td id="red" onclick="buttonClick(23, 'red')">23</td>
+                <td id="black" onclick="buttonClick(26, 'white')">26</td>
+                <td id="black" onclick="buttonClick(29, 'white')">29</td>
+                <td id="red" onclick="buttonClick(32, 'red')">32</td>
+                <td id="black" onclick="buttonClick(35, 'white')">35</td>
+                <td id="labels" name="middleRowCount" colspan="2"></td>
+            </tr>
+            <tr>
+                <td id="red" onclick="buttonClick(1, 'red')">1</td>
+                <td id="black" onclick="buttonClick(4, 'white')">4</td>
+                <td id="red" onclick="buttonClick(7, 'red')">7</td>
+                <td id="black" onclick="buttonClick(10, 'white')">10</td>
+                <td id="black" onclick="buttonClick(13, 'white')">13</td>
+                <td id="red" onclick="buttonClick(16, 'red')">16</td>
+                <td id="red" onclick="buttonClick(19, 'red')">19</td>
+                <td id="black" onclick="buttonClick(22, 'white')">22</td>
+                <td id="red" onclick="buttonClick(25, 'red')">25</td>
+                <td id="black" onclick="buttonClick(28, 'white')">28</td>
+                <td id="black" onclick="buttonClick(31, 'white')">31</td>
+                <td id="red" onclick="buttonClick(34, 'red')">34</td>
+                <td id="labels" name="bottomRowCount" colspan="2"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="labels" name="leftColCount" colspan="4"></td>
+                <td id="labels" name="middleColCount" colspan="4"></td>
+                <td id="labels" name="rightColCount" colspan="4"></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="table-container">
+
+        <table>
+            <tr>
+                <td name="results1"></td>
+                <td name="results2"></td>
+                <td name="results3"></td>
+                <td name="results4"></td>
+                <td name="results5"></td>
+                <td name="results6"></td>
+                <td name="results7"></td>
+                <td name="results8"></td>
+                <td name="results9"></td>
+                <td name="results10"></td>
+                <td name="results11"></td>
+                <td name="results12"></td>
+                <td name="results13"></td>
+                <td name="results14"></td>
+                <td name="results15"></td>
+            </tr>
+
+        </table>
+    </div>
 
     <script>
-        function buttonClick(number) {
-            //alert("Button clicked: " + number);
-            // Add your custom logic here for what should happen when a button is clicked
+        const streakVal = 10;
+
+        let results1 = document.getElementsByName('results1')[0];
+        let results2 = document.getElementsByName('results2')[0];
+        let results3 = document.getElementsByName('results3')[0];
+        let results4 = document.getElementsByName('results4')[0];
+        let results5 = document.getElementsByName('results5')[0];
+        let results6 = document.getElementsByName('results6')[0];
+        let results7 = document.getElementsByName('results7')[0];
+        let results8 = document.getElementsByName('results8')[0];
+        let results9 = document.getElementsByName('results9')[0];
+        let results10 = document.getElementsByName('results10')[0];
+        let results11 = document.getElementsByName('results11')[0];
+        let results12 = document.getElementsByName('results12')[0];
+        let results13 = document.getElementsByName('results13')[0];
+        let results14 = document.getElementsByName('results14')[0];
+        let results15 = document.getElementsByName('results15')[0];
+
+        let topRowCount = document.getElementsByName('topRowCount')[0];
+        let middleRowCount = document.getElementsByName('middleRowCount')[0];
+        let bottomRowCount = document.getElementsByName('bottomRowCount')[0];
+
+        let leftColCount = document.getElementsByName('leftColCount')[0];
+        let middleColCount = document.getElementsByName('middleColCount')[0];
+        let rightColCount = document.getElementsByName('rightColCount')[0];
+
+        const topRow = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36];
+        const middleRow = [2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35];
+        const bottomRow = [1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34];
+
+        const leftCol = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+        const middleCol = [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24];
+        const rightCol = [25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36];
+
+        let topRowStreak = 0;
+        let middleRowStreak = 0;
+        let bottomRowStreak = 0;
+
+        let leftColStreak = 0;
+        let middleColStreak = 0;
+        let rightColStreak = 0;
+
+        function buttonClick(value, textColor) {
+            //----------------------------------------------------------------------------
+            //Results Output
+            //----------------------------------------------------------------------------
+            //Work backwards from right to left
+            results15.textContent = results14.textContent;
+            results15.style.color = results14.style.color;
+            results14.textContent = results13.textContent;
+            results14.style.color = results13.style.color;
+            results13.textContent = results12.textContent;
+            results13.style.color = results12.style.color;
+            results12.textContent = results11.textContent;
+            results12.style.color = results11.style.color;
+            results11.textContent = results10.textContent;
+            results11.style.color = results10.style.color;
+            results10.textContent = results9.textContent;
+            results10.style.color = results9.style.color;
+            results9.textContent = results8.textContent;
+            results9.style.color = results8.style.color;
+            results8.textContent = results7.textContent;
+            results8.style.color = results7.style.color;
+            results7.textContent = results6.textContent;
+            results7.style.color = results6.style.color;
+            results6.textContent = results5.textContent;
+            results6.style.color = results5.style.color;
+            results5.textContent = results4.textContent;
+            results5.style.color = results4.style.color;
+            results4.textContent = results3.textContent;
+            results4.style.color = results3.style.color;
+            results3.textContent = results2.textContent;
+            results3.style.color = results2.style.color;
+            results2.textContent = results1.textContent;
+            results2.style.color = results1.style.color;
+            
+            //Get latest value and colour
+            results1.textContent = value;
+            results1.style.color = textColor;
+
+            //----------------------------------------------------------------------------
+            // Check in rows
+            //----------------------------------------------------------------------------
+            if (topRow.includes(value)) {
+                topRowStreak = 0;
+                middleRowStreak++;
+                bottomRowStreak++;
+            } else if (middleRow.includes(value)) {
+                topRowStreak++;
+                middleRowStreak = 0;
+                bottomRowStreak++;
+            } else if (bottomRow.includes(value)) {
+                topRowStreak++;
+                middleRowStreak++;
+                bottomRowStreak = 0;
+            } else {
+                //treat green as +1 to streak count
+                topRowStreak++;
+                middleRowStreak++;
+                bottomRowStreak++;
+            }
+
+            topRowCount.textContent = topRowStreak;
+            middleRowCount.textContent = middleRowStreak;
+            bottomRowCount.textContent = bottomRowStreak;
+
+            //Control the colours of the labels for turning green over N streak
+            if (topRowStreak >= streakVal) {
+                topRowCount.style.backgroundColor = 'green';
+                topRowCount.style.color = 'black'
+            } else {
+                topRowCount.style.backgroundColor = 'black';
+                topRowCount.style.color = 'white'
+            }
+
+            if (middleRowStreak >= streakVal) {
+                middleRowCount.style.backgroundColor = 'green';
+                middleRowCount.style.color = 'black'
+            } else {
+                middleRowCount.style.backgroundColor = 'black';
+                middleRowCount.style.color = 'white'
+            }
+
+            if (bottomRowStreak >= streakVal) {
+                bottomRowCount.style.backgroundColor = 'green';
+                bottomRowCount.style.color = 'black'
+            } else {
+                bottomRowCount.style.backgroundColor = 'black';
+                bottomRowCount.style.color = 'white'
+            }
+
+            //----------------------------------------------------------------------------
+            // Check in columns
+            //----------------------------------------------------------------------------
+            if (leftCol.includes(value)) {
+                leftColStreak = 0;
+                middleColStreak++;
+                rightColStreak++;
+            } else if (middleCol.includes(value)) {
+                leftColStreak++;
+                middleColStreak = 0;
+                rightColStreak++;
+            } else if (rightCol.includes(value)) {
+                leftColStreak++;
+                middleColStreak++;
+                rightColStreak = 0;
+            } else {
+                //treat green as +1 to streak count
+                leftColStreak++;
+                middleColStreak++;
+                rightColStreak++;
+            }
+
+            leftColCount.textContent = leftColStreak;
+            middleColCount.textContent = middleColStreak;
+            rightColCount.textContent = rightColStreak;
+
+            //----------------------------------------------------------------------------
+            //Control the colours of the labels for turning green over N streak
+            //----------------------------------------------------------------------------
+            if (leftColStreak >= streakVal) {
+                leftColCount.style.backgroundColor = 'green';
+                leftColCount.style.color = 'black'
+            } else {
+                leftColCount.style.backgroundColor = 'black';
+                leftColCount.style.color = 'white'
+            }
+
+            if (middleColStreak >= streakVal) {
+                middleColCount.style.backgroundColor = 'green';
+                middleColCount.style.color = 'black'
+            } else {
+                middleColCount.style.backgroundColor = 'black';
+                middleColCount.style.color = 'white'
+            }
+
+            if (rightColStreak >= streakVal) {
+                rightColCount.style.backgroundColor = 'green';
+                rightColCount.style.color = 'black'
+            } else {
+                rightColCount.style.backgroundColor = 'black';
+                rightColCount.style.color = 'white'
+            }
+
         }
+
     </script>
 
 </body>
