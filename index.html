@@ -53,6 +53,18 @@
             color: black;
             font-weight: bold;
         }
+
+        #heading {
+            background-color: green;
+            color: black;
+            font-weight: bold;
+        }
+        
+        #streakNumbers {
+            background-color: darkslategray;
+            color: black;
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -62,48 +74,48 @@
         <table id="numberTable">
             <tr>
                 <td name="button0" id="green" rowspan="3" onclick="buttonClick(0, 'green')">0</td>
-                <td id="red" onclick="buttonClick(3, 'red')">3</td>
-                <td id="black" onclick="buttonClick(6, 'white')">6</td>
-                <td id="red" onclick="buttonClick(9, 'red')">9</td>
-                <td id="red" onclick="buttonClick(12, 'red')">12</td>
-                <td id="black" onclick="buttonClick(15, 'white')">15</td>
-                <td id="red" onclick="buttonClick(18, 'red')">18</td>
-                <td id="red" onclick="buttonClick(21, 'red')">21</td>
-                <td id="black" onclick="buttonClick(24, 'white')">24</td>
-                <td id="red" onclick="buttonClick(27, 'red')">27</td>
-                <td id="red" onclick="buttonClick(30, 'red')">30</td>
-                <td id="black" onclick="buttonClick(33, 'white')">33</td>
-                <td id="red" onclick="buttonClick(36, 'red')">36</td>
+                <td id="red" onclick="buttonClick(3, 'red', 'top', 'left')">3</td>
+                <td id="black" onclick="buttonClick(6, 'white', 'top', 'left')">6</td>
+                <td id="red" onclick="buttonClick(9, 'red', 'top', 'left')">9</td>
+                <td id="red" onclick="buttonClick(12, 'red', 'top', 'left')">12</td>
+                <td id="black" onclick="buttonClick(15, 'white', 'top', 'middle')">15</td>
+                <td id="red" onclick="buttonClick(18, 'red', 'top', 'middle')">18</td>
+                <td id="red" onclick="buttonClick(21, 'red', 'top', 'middle')">21</td>
+                <td id="black" onclick="buttonClick(24, 'white', 'top', 'middle')">24</td>
+                <td id="red" onclick="buttonClick(27, 'red', 'top', 'right')">27</td>
+                <td id="red" onclick="buttonClick(30, 'red', 'top', 'right')">30</td>
+                <td id="black" onclick="buttonClick(33, 'white', 'top', 'right')">33</td>
+                <td id="red" onclick="buttonClick(36, 'red', 'top', 'right')">36</td>
                 <td id="labels" name="topRowCount" colspan="2"></td>
             </tr>
             <tr>
-                <td id="black" onclick="buttonClick(2, 'white')">2</td>
-                <td id="red" onclick="buttonClick(5, 'red')">5</td>
-                <td id="black" onclick="buttonClick(8, 'white')">8</td>
-                <td id="black" onclick="buttonClick(11, 'white')">11</td>
-                <td id="red" onclick="buttonClick(14, 'red')">14</td>
-                <td id="black" onclick="buttonClick(17, 'white')">17</td>
-                <td id="black" onclick="buttonClick(20, 'white')">20</td>
-                <td id="red" onclick="buttonClick(23, 'red')">23</td>
-                <td id="black" onclick="buttonClick(26, 'white')">26</td>
-                <td id="black" onclick="buttonClick(29, 'white')">29</td>
-                <td id="red" onclick="buttonClick(32, 'red')">32</td>
-                <td id="black" onclick="buttonClick(35, 'white')">35</td>
+                <td id="black" onclick="buttonClick(2, 'white', 'middle', 'left')">2</td>
+                <td id="red" onclick="buttonClick(5, 'red', 'middle', 'left')">5</td>
+                <td id="black" onclick="buttonClick(8, 'white', 'middle', 'left')">8</td>
+                <td id="black" onclick="buttonClick(11, 'white', 'middle', 'left')">11</td>
+                <td id="red" onclick="buttonClick(14, 'red', 'middle', 'middle')">14</td>
+                <td id="black" onclick="buttonClick(17, 'white', 'middle', 'middle')">17</td>
+                <td id="black" onclick="buttonClick(20, 'white', 'middle', 'middle')">20</td>
+                <td id="red" onclick="buttonClick(23, 'red', 'middle', 'middle')">23</td>
+                <td id="black" onclick="buttonClick(26, 'white', 'middle', 'right')">26</td>
+                <td id="black" onclick="buttonClick(29, 'white', 'middle', 'right')">29</td>
+                <td id="red" onclick="buttonClick(32, 'red', 'middle', 'right')">32</td>
+                <td id="black" onclick="buttonClick(35, 'white', 'middle', 'right')">35</td>
                 <td id="labels" name="middleRowCount" colspan="2"></td>
             </tr>
             <tr>
-                <td id="red" onclick="buttonClick(1, 'red')">1</td>
-                <td id="black" onclick="buttonClick(4, 'white')">4</td>
-                <td id="red" onclick="buttonClick(7, 'red')">7</td>
-                <td id="black" onclick="buttonClick(10, 'white')">10</td>
-                <td id="black" onclick="buttonClick(13, 'white')">13</td>
-                <td id="red" onclick="buttonClick(16, 'red')">16</td>
-                <td id="red" onclick="buttonClick(19, 'red')">19</td>
-                <td id="black" onclick="buttonClick(22, 'white')">22</td>
-                <td id="red" onclick="buttonClick(25, 'red')">25</td>
-                <td id="black" onclick="buttonClick(28, 'white')">28</td>
-                <td id="black" onclick="buttonClick(31, 'white')">31</td>
-                <td id="red" onclick="buttonClick(34, 'red')">34</td>
+                <td id="red" onclick="buttonClick(1, 'red', 'bottom', 'left')">1</td>
+                <td id="black" onclick="buttonClick(4, 'white', 'bottom', 'left')">4</td>
+                <td id="red" onclick="buttonClick(7, 'red', 'bottom', 'left')">7</td>
+                <td id="black" onclick="buttonClick(10, 'white', 'bottom', 'left')">10</td>
+                <td id="black" onclick="buttonClick(13, 'white', 'bottom', 'middle')">13</td>
+                <td id="red" onclick="buttonClick(16, 'red', 'bottom', 'middle')">16</td>
+                <td id="red" onclick="buttonClick(19, 'red', 'bottom', 'middle')">19</td>
+                <td id="black" onclick="buttonClick(22, 'white', 'bottom', 'middle')">22</td>
+                <td id="red" onclick="buttonClick(25, 'red', 'bottom', 'right')">25</td>
+                <td id="black" onclick="buttonClick(28, 'white', 'bottom', 'right')">28</td>
+                <td id="black" onclick="buttonClick(31, 'white', 'bottom', 'right')">31</td>
+                <td id="red" onclick="buttonClick(34, 'red', 'bottom', 'right')">34</td>
                 <td id="labels" name="bottomRowCount" colspan="2"></td>
             </tr>
             <tr>
@@ -118,7 +130,6 @@
     </div>
 
     <div class="table-container">
-
         <table>
             <tr>
                 <td name="results1"></td>
@@ -137,12 +148,168 @@
                 <td name="results14"></td>
                 <td name="results15"></td>
             </tr>
+        </table>
+    </div>
 
+    <br />
+    <br />
+
+    <!--ROWS TABLE-->
+    <div class="table-container">
+        <table id="RowStreaks">
+            <tr>
+                <td id="heading" colspan="15">Rows</td>
+            </tr>
+            <tr>
+                <td id="streakNumbers">1</td>
+                <td id="streakNumbers">2</td>
+                <td id="streakNumbers">3</td>
+                <td id="streakNumbers">4</td>
+                <td id="streakNumbers">5</td>
+                <td id="streakNumbers">6</td>
+                <td id="streakNumbers">7</td>
+                <td id="streakNumbers">8</td>
+                <td id="streakNumbers">9</td>
+                <td id="streakNumbers">10</td>
+                <td id="streakNumbers">11</td>
+                <td id="streakNumbers">12</td>
+                <td id="streakNumbers">13</td>
+                <td id="streakNumbers">14</td>
+                <td id="streakNumbers">15</td>
+            </tr>
+            <tr>
+                <td name="rowStreakVal1" id="black"></td>
+                <td name="rowStreakVal2" id="black"></td>
+                <td name="rowStreakVal3" id="black"></td>
+                <td name="rowStreakVal4" id="black"></td>
+                <td name="rowStreakVal5" id="black"></td>
+                <td name="rowStreakVal6" id="black"></td>
+                <td name="rowStreakVal7" id="black"></td>
+                <td name="rowStreakVal8" id="black"></td>
+                <td name="rowStreakVal9" id="black"></td>
+                <td name="rowStreakVal10" id="black"></td>
+                <td name="rowStreakVal11" id="black"></td>
+                <td name="rowStreakVal12" id="black"></td>
+                <td name="rowStreakVal13" id="black"></td>
+                <td name="rowStreakVal14" id="black"></td>
+                <td name="rowStreakVal15" id="black"></td>
+            </tr>
+            <tr>
+                <td id="streakNumbers">16</td>
+                <td id="streakNumbers">17</td>
+                <td id="streakNumbers">18</td>
+                <td id="streakNumbers">19</td>
+                <td id="streakNumbers">20</td>
+                <td id="streakNumbers">21</td>
+                <td id="streakNumbers">22</td>
+                <td id="streakNumbers">23</td>
+                <td id="streakNumbers">24</td>
+                <td id="streakNumbers">25</td>
+                <td id="streakNumbers">26</td>
+                <td id="streakNumbers">27</td>
+                <td id="streakNumbers">28</td>
+                <td id="streakNumbers">29</td>
+                <td id="streakNumbers">30</td>
+            </tr>
+            <tr>
+                <td name="rowStreakVal16" id="black"></td>
+                <td name="rowStreakVal17" id="black"></td>
+                <td name="rowStreakVal18" id="black"></td>
+                <td name="rowStreakVal19" id="black"></td>
+                <td name="rowStreakVal20" id="black"></td>
+                <td name="rowStreakVal21" id="black"></td>
+                <td name="rowStreakVal22" id="black"></td>
+                <td name="rowStreakVal23" id="black"></td>
+                <td name="rowStreakVal24" id="black"></td>
+                <td name="rowStreakVal25" id="black"></td>
+                <td name="rowStreakVal26" id="black"></td>
+                <td name="rowStreakVal27" id="black"></td>
+                <td name="rowStreakVal28" id="black"></td>
+                <td name="rowStreakVal29" id="black"></td>
+                <td name="rowStreakVal30" id="black"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!--COLUMN TABLE-->
+    <div class="table-container">
+        <table id="ColStreaks">
+            <tr>
+                <td id="heading" colspan="15">Columns</td>
+            </tr>
+            <tr>
+                <td id="streakNumbers">1</td>
+                <td id="streakNumbers">2</td>
+                <td id="streakNumbers">3</td>
+                <td id="streakNumbers">4</td>
+                <td id="streakNumbers">5</td>
+                <td id="streakNumbers">6</td>
+                <td id="streakNumbers">7</td>
+                <td id="streakNumbers">8</td>
+                <td id="streakNumbers">9</td>
+                <td id="streakNumbers">10</td>
+                <td id="streakNumbers">11</td>
+                <td id="streakNumbers">12</td>
+                <td id="streakNumbers">13</td>
+                <td id="streakNumbers">14</td>
+                <td id="streakNumbers">15</td>
+            </tr>
+            <tr>
+                <td name="colStreakVal1" id="black"></td>
+                <td name="colStreakVal2" id="black"></td>
+                <td name="colStreakVal3" id="black"></td>
+                <td name="colStreakVal4" id="black"></td>
+                <td name="colStreakVal5" id="black"></td>
+                <td name="colStreakVal6" id="black"></td>
+                <td name="colStreakVal7" id="black"></td>
+                <td name="colStreakVal8" id="black"></td>
+                <td name="colStreakVal9" id="black"></td>
+                <td name="colStreakVal10" id="black"></td>
+                <td name="colStreakVal11" id="black"></td>
+                <td name="colStreakVal12" id="black"></td>
+                <td name="colStreakVal13" id="black"></td>
+                <td name="colStreakVal14" id="black"></td>
+                <td name="colStreakVal15" id="black"></td>
+            </tr>
+            <tr>
+                <td id="streakNumbers">16</td>
+                <td id="streakNumbers">17</td>
+                <td id="streakNumbers">18</td>
+                <td id="streakNumbers">19</td>
+                <td id="streakNumbers">20</td>
+                <td id="streakNumbers">21</td>
+                <td id="streakNumbers">22</td>
+                <td id="streakNumbers">23</td>
+                <td id="streakNumbers">24</td>
+                <td id="streakNumbers">25</td>
+                <td id="streakNumbers">26</td>
+                <td id="streakNumbers">27</td>
+                <td id="streakNumbers">28</td>
+                <td id="streakNumbers">29</td>
+                <td id="streakNumbers">30</td>
+            </tr>
+            <tr>
+                <td name="colStreakVal16" id="black"></td>
+                <td name="colStreakVal17" id="black"></td>
+                <td name="colStreakVal18" id="black"></td>
+                <td name="colStreakVal19" id="black"></td>
+                <td name="colStreakVal20" id="black"></td>
+                <td name="colStreakVal21" id="black"></td>
+                <td name="colStreakVal22" id="black"></td>
+                <td name="colStreakVal23" id="black"></td>
+                <td name="colStreakVal24" id="black"></td>
+                <td name="colStreakVal25" id="black"></td>
+                <td name="colStreakVal26" id="black"></td>
+                <td name="colStreakVal27" id="black"></td>
+                <td name="colStreakVal28" id="black"></td>
+                <td name="colStreakVal29" id="black"></td>
+                <td name="colStreakVal30" id="black"></td>
+            </tr>
         </table>
     </div>
 
     <script>
-        const streakVal = 10;
+        const rowStreakVal = 10;
 
         let results1 = document.getElementsByName('results1')[0];
         let results2 = document.getElementsByName('results2')[0];
@@ -184,40 +351,21 @@
         let middleColStreak = 0;
         let rightColStreak = 0;
 
-        function buttonClick(value, textColor) {
+        function buttonClick(value, textColor, row, col) {
+
+            //Trigger the streak counter too
+            countStreaks(value, row, col);
+
             //----------------------------------------------------------------------------
             //Results Output
             //----------------------------------------------------------------------------
-            //Work backwards from right to left
-            results15.textContent = results14.textContent;
-            results15.style.color = results14.style.color;
-            results14.textContent = results13.textContent;
-            results14.style.color = results13.style.color;
-            results13.textContent = results12.textContent;
-            results13.style.color = results12.style.color;
-            results12.textContent = results11.textContent;
-            results12.style.color = results11.style.color;
-            results11.textContent = results10.textContent;
-            results11.style.color = results10.style.color;
-            results10.textContent = results9.textContent;
-            results10.style.color = results9.style.color;
-            results9.textContent = results8.textContent;
-            results9.style.color = results8.style.color;
-            results8.textContent = results7.textContent;
-            results8.style.color = results7.style.color;
-            results7.textContent = results6.textContent;
-            results7.style.color = results6.style.color;
-            results6.textContent = results5.textContent;
-            results6.style.color = results5.style.color;
-            results5.textContent = results4.textContent;
-            results5.style.color = results4.style.color;
-            results4.textContent = results3.textContent;
-            results4.style.color = results3.style.color;
-            results3.textContent = results2.textContent;
-            results3.style.color = results2.style.color;
-            results2.textContent = results1.textContent;
-            results2.style.color = results1.style.color;
-            
+            for (let i = 15; i > 1; i--) {
+                const currentResult = document.getElementsByName(`results${i}`)[0];
+                const previousResult = document.getElementsByName(`results${i - 1}`)[0];
+
+                currentResult.textContent = previousResult.textContent;
+                currentResult.style.color = previousResult.style.color;
+            }
             //Get latest value and colour
             results1.textContent = value;
             results1.style.color = textColor;
@@ -249,7 +397,7 @@
             bottomRowCount.textContent = bottomRowStreak;
 
             //Control the colours of the labels for turning green over N streak
-            if (topRowStreak >= streakVal) {
+            if (topRowStreak >= rowStreakVal) {
                 topRowCount.style.backgroundColor = 'green';
                 topRowCount.style.color = 'black'
             } else {
@@ -257,7 +405,7 @@
                 topRowCount.style.color = 'white'
             }
 
-            if (middleRowStreak >= streakVal) {
+            if (middleRowStreak >= rowStreakVal) {
                 middleRowCount.style.backgroundColor = 'green';
                 middleRowCount.style.color = 'black'
             } else {
@@ -265,7 +413,7 @@
                 middleRowCount.style.color = 'white'
             }
 
-            if (bottomRowStreak >= streakVal) {
+            if (bottomRowStreak >= rowStreakVal) {
                 bottomRowCount.style.backgroundColor = 'green';
                 bottomRowCount.style.color = 'black'
             } else {
@@ -302,7 +450,7 @@
             //----------------------------------------------------------------------------
             //Control the colours of the labels for turning green over N streak
             //----------------------------------------------------------------------------
-            if (leftColStreak >= streakVal) {
+            if (leftColStreak >= rowStreakVal) {
                 leftColCount.style.backgroundColor = 'green';
                 leftColCount.style.color = 'black'
             } else {
@@ -310,7 +458,7 @@
                 leftColCount.style.color = 'white'
             }
 
-            if (middleColStreak >= streakVal) {
+            if (middleColStreak >= rowStreakVal) {
                 middleColCount.style.backgroundColor = 'green';
                 middleColCount.style.color = 'black'
             } else {
@@ -318,7 +466,7 @@
                 middleColCount.style.color = 'white'
             }
 
-            if (rightColStreak >= streakVal) {
+            if (rightColStreak >= rowStreakVal) {
                 rightColCount.style.backgroundColor = 'green';
                 rightColCount.style.color = 'black'
             } else {
@@ -328,6 +476,104 @@
 
         }
 
+
+
+
+
+
+
+
+
+        //**********************************************************************************************************************************************
+        //ROW and COL COUNTER
+        //**********************************************************************************************************************************************
+        let rowObj = { "top": 0, "middle": 0, "bottom": 0 };
+        let rowStreaksObj = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 0, 18: 0, 19: 0, 20: 0, 21: 0, 22: 0, 23: 0, 24: 0, 25: 0, 26: 0, 27: 0, 28: 0, 29: 0, 30: 0 };
+        let currentRow = null;
+
+        let colObj = { "left": 0, "middle": 0, "right": 0 };
+        let colStreaksObj = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 0, 18: 0, 19: 0, 20: 0, 21: 0, 22: 0, 23: 0, 24: 0, 25: 0, 26: 0, 27: 0, 28: 0, 29: 0, 30: 0 };
+        let currentCol = null;
+
+
+        function countStreaks(number, row, col) {
+            // Check if it's the first click or the same row is clicked again.
+            if (currentRow === null || currentRow === row) {
+                rowObj[row]++;
+            } else {
+                //Plus 1 to the correct number in the row streaks object
+                rowStreaksObj[rowObj[currentRow]]++;
+                //Reset the object values so that we can start counting from 0
+                rowObj["top"] = 0;
+                rowObj["middle"] = 0;
+                rowObj["bottom"] = 0;
+                // Increment the count of the clicked row in the rowObj object.
+                rowObj[row]++;
+            }
+            // Update the currentRow variable to the clicked row.
+            currentRow = row;
+
+            //----------------------------------------------------------------------------
+            //UPDATE TABLE
+            //----------------------------------------------------------------------------
+            for (let i = 1; i <= 30; i++) {
+                let elementName = `rowStreakVal${i}`;
+                let currentElement = document.querySelector(`td[name="${elementName}"]`);
+
+                if (currentElement && rowStreaksObj[i] > 0) {
+                    currentElement.textContent = rowStreaksObj[i];
+                    //console.log(rowStreaksObj[i]);
+                } else {
+                    //console.error(`Element with name ${elementName} not found.`);
+                }
+
+            }
+
+
+
+
+
+            //**********************************************************************************************************************************************
+            //COL COUNTER
+            //**********************************************************************************************************************************************
+
+
+
+
+            // Check if it's the first click or the same col is clicked again.
+            if (currentCol === null || currentCol === col) {
+                colObj[col]++;
+            } else {
+                //Plus 1 to the correct number in the col streaks object
+                colStreaksObj[colObj[currentCol]]++;
+                //Reset the object values so that we can start counting from 0
+                colObj["left"] = 0;
+                colObj["middle"] = 0;
+                colObj["right"] = 0;
+                // Increment the count of the clicked col in the colObj object.
+                colObj[col]++;
+            }
+            // Update the currentCol variable to the clicked col. 
+            currentCol = col;
+
+            //----------------------------------------------------------------------------
+            //UPDATE TABLE
+            //----------------------------------------------------------------------------
+            for (let j = 1; j <= 30; j++) {
+                let colElementName = `colStreakVal${j}`;
+                let currentColElement = document.querySelector(`td[name="${colElementName}"]`);
+
+                if (currentColElement && colStreaksObj[j] > 0) {
+                    currentColElement.textContent = colStreaksObj[j];
+                    //console.log(colStreaksObj[j]);
+                } else {
+                    //console.error(`Element with name ${colElementName} not found.`);
+                }
+
+            }
+
+        }
+        //**********************************************************************************************************************************************
     </script>
 
 </body>
