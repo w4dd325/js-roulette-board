@@ -55,11 +55,11 @@
         }
 
         #heading {
-            background-color: green;
-            color: black;
+            background-color: black;
+            color: white;
             font-weight: bold;
         }
-        
+
         #streakNumbers {
             background-color: darkslategray;
             color: black;
@@ -73,7 +73,7 @@
 
         <table id="numberTable">
             <tr>
-                <td name="button0" id="green" rowspan="3" onclick="buttonClick(0, 'green')">0</td>
+                <td name="button0" id="green" rowspan="3" onclick="buttonClick(0, 'green', 'null', 'null')">0</td>
                 <td id="red" onclick="buttonClick(3, 'red', 'top', 'left')">3</td>
                 <td id="black" onclick="buttonClick(6, 'white', 'top', 'left')">6</td>
                 <td id="red" onclick="buttonClick(9, 'red', 'top', 'left')">9</td>
@@ -178,21 +178,21 @@
                 <td id="streakNumbers">15</td>
             </tr>
             <tr>
-                <td name="rowStreakVal1" id="black"></td>
-                <td name="rowStreakVal2" id="black"></td>
-                <td name="rowStreakVal3" id="black"></td>
-                <td name="rowStreakVal4" id="black"></td>
-                <td name="rowStreakVal5" id="black"></td>
-                <td name="rowStreakVal6" id="black"></td>
-                <td name="rowStreakVal7" id="black"></td>
-                <td name="rowStreakVal8" id="black"></td>
-                <td name="rowStreakVal9" id="black"></td>
-                <td name="rowStreakVal10" id="black"></td>
-                <td name="rowStreakVal11" id="black"></td>
-                <td name="rowStreakVal12" id="black"></td>
-                <td name="rowStreakVal13" id="black"></td>
-                <td name="rowStreakVal14" id="black"></td>
-                <td name="rowStreakVal15" id="black"></td>
+                <td name="rowStreakVal1" id="black" data-js-id="streakOutput"></td>
+                <td name="rowStreakVal2" id="black" data-js-id="streakOutput"></td>
+                <td name="rowStreakVal3" id="black" data-js-id="streakOutput"></td>
+                <td name="rowStreakVal4" id="black" data-js-id="streakOutput"></td>
+                <td name="rowStreakVal5" id="black" data-js-id="streakOutput"></td>
+                <td name="rowStreakVal6" id="black" data-js-id="streakOutput"></td>
+                <td name="rowStreakVal7" id="black" data-js-id="streakOutput"></td>
+                <td name="rowStreakVal8" id="black" data-js-id="streakOutput"></td>
+                <td name="rowStreakVal9" id="black" data-js-id="streakOutput"></td>
+                <td name="rowStreakVal10" id="black" data-js-id="streakOutput"></td>
+                <td name="rowStreakVal11" id="black" data-js-id="streakOutput"></td>
+                <td name="rowStreakVal12" id="black" data-js-id="streakOutput"></td>
+                <td name="rowStreakVal13" id="black" data-js-id="streakOutput"></td>
+                <td name="rowStreakVal14" id="black" data-js-id="streakOutput"></td>
+                <td name="rowStreakVal15" id="black" data-js-id="streakOutput"></td>
             </tr>
             <tr>
                 <td id="streakNumbers">16</td>
@@ -212,21 +212,21 @@
                 <td id="streakNumbers">30</td>
             </tr>
             <tr>
-                <td name="rowStreakVal16" id="black"></td>
-                <td name="rowStreakVal17" id="black"></td>
-                <td name="rowStreakVal18" id="black"></td>
-                <td name="rowStreakVal19" id="black"></td>
-                <td name="rowStreakVal20" id="black"></td>
-                <td name="rowStreakVal21" id="black"></td>
-                <td name="rowStreakVal22" id="black"></td>
-                <td name="rowStreakVal23" id="black"></td>
-                <td name="rowStreakVal24" id="black"></td>
-                <td name="rowStreakVal25" id="black"></td>
-                <td name="rowStreakVal26" id="black"></td>
-                <td name="rowStreakVal27" id="black"></td>
-                <td name="rowStreakVal28" id="black"></td>
-                <td name="rowStreakVal29" id="black"></td>
-                <td name="rowStreakVal30" id="black"></td>
+                <td name="rowStreakVal16" id="black" data-js-id="streakOutput"></td>
+                <td name="rowStreakVal17" id="black" data-js-id="streakOutput"></td>
+                <td name="rowStreakVal18" id="black" data-js-id="streakOutput"></td>
+                <td name="rowStreakVal19" id="black" data-js-id="streakOutput"></td>
+                <td name="rowStreakVal20" id="black" data-js-id="streakOutput"></td>
+                <td name="rowStreakVal21" id="black" data-js-id="streakOutput"></td>
+                <td name="rowStreakVal22" id="black" data-js-id="streakOutput"></td>
+                <td name="rowStreakVal23" id="black" data-js-id="streakOutput"></td>
+                <td name="rowStreakVal24" id="black" data-js-id="streakOutput"></td>
+                <td name="rowStreakVal25" id="black" data-js-id="streakOutput"></td>
+                <td name="rowStreakVal26" id="black" data-js-id="streakOutput"></td>
+                <td name="rowStreakVal27" id="black" data-js-id="streakOutput"></td>
+                <td name="rowStreakVal28" id="black" data-js-id="streakOutput"></td>
+                <td name="rowStreakVal29" id="black" data-js-id="streakOutput"></td>
+                <td name="rowStreakVal30" id="black" data-js-id="streakOutput"></td>
             </tr>
         </table>
     </div>
@@ -308,6 +308,10 @@
         </table>
     </div>
 
+
+    <input type="file" id="fileInput" />
+    <div id="output"></div>
+
     <script>
         const rowStreakVal = 10;
 
@@ -356,9 +360,9 @@
             //Trigger the streak counter too
             countStreaks(value, row, col);
 
-            //----------------------------------------------------------------------------
+            //--------------
             //Results Output
-            //----------------------------------------------------------------------------
+            //--------------
             for (let i = 15; i > 1; i--) {
                 const currentResult = document.getElementsByName(`results${i}`)[0];
                 const previousResult = document.getElementsByName(`results${i - 1}`)[0];
@@ -370,9 +374,9 @@
             results1.textContent = value;
             results1.style.color = textColor;
 
-            //----------------------------------------------------------------------------
+            //--------------
             // Check in rows
-            //----------------------------------------------------------------------------
+            //--------------
             if (topRow.includes(value)) {
                 topRowStreak = 0;
                 middleRowStreak++;
@@ -421,9 +425,9 @@
                 bottomRowCount.style.color = 'white'
             }
 
-            //----------------------------------------------------------------------------
+            //-----------------
             // Check in columns
-            //----------------------------------------------------------------------------
+            //-----------------
             if (leftCol.includes(value)) {
                 leftColStreak = 0;
                 middleColStreak++;
@@ -447,9 +451,9 @@
             middleColCount.textContent = middleColStreak;
             rightColCount.textContent = rightColStreak;
 
-            //----------------------------------------------------------------------------
+            //-----------------------------------------------------------------
             //Control the colours of the labels for turning green over N streak
-            //----------------------------------------------------------------------------
+            //-----------------------------------------------------------------
             if (leftColStreak >= rowStreakVal) {
                 leftColCount.style.backgroundColor = 'green';
                 leftColCount.style.color = 'black'
@@ -476,17 +480,9 @@
 
         }
 
-
-
-
-
-
-
-
-
-        //**********************************************************************************************************************************************
+        //*********************************************************************************
         //ROW and COL COUNTER
-        //**********************************************************************************************************************************************
+        //*********************************************************************************
         let rowObj = { "top": 0, "middle": 0, "bottom": 0 };
         let rowStreaksObj = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 0, 18: 0, 19: 0, 20: 0, 21: 0, 22: 0, 23: 0, 24: 0, 25: 0, 26: 0, 27: 0, 28: 0, 29: 0, 30: 0 };
         let currentRow = null;
@@ -494,7 +490,6 @@
         let colObj = { "left": 0, "middle": 0, "right": 0 };
         let colStreaksObj = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 0, 18: 0, 19: 0, 20: 0, 21: 0, 22: 0, 23: 0, 24: 0, 25: 0, 26: 0, 27: 0, 28: 0, 29: 0, 30: 0 };
         let currentCol = null;
-
 
         function countStreaks(number, row, col) {
             // Check if it's the first click or the same row is clicked again.
@@ -513,9 +508,9 @@
             // Update the currentRow variable to the clicked row.
             currentRow = row;
 
-            //----------------------------------------------------------------------------
+            //------------
             //UPDATE TABLE
-            //----------------------------------------------------------------------------
+            //------------
             for (let i = 1; i <= 30; i++) {
                 let elementName = `rowStreakVal${i}`;
                 let currentElement = document.querySelector(`td[name="${elementName}"]`);
@@ -529,17 +524,9 @@
 
             }
 
-
-
-
-
-            //**********************************************************************************************************************************************
+            //*********************************************************************************
             //COL COUNTER
-            //**********************************************************************************************************************************************
-
-
-
-
+            //*********************************************************************************
             // Check if it's the first click or the same col is clicked again.
             if (currentCol === null || currentCol === col) {
                 colObj[col]++;
@@ -556,9 +543,9 @@
             // Update the currentCol variable to the clicked col. 
             currentCol = col;
 
-            //----------------------------------------------------------------------------
+            //------------
             //UPDATE TABLE
-            //----------------------------------------------------------------------------
+            //------------
             for (let j = 1; j <= 30; j++) {
                 let colElementName = `colStreakVal${j}`;
                 let currentColElement = document.querySelector(`td[name="${colElementName}"]`);
@@ -573,7 +560,76 @@
             }
 
         }
-        //**********************************************************************************************************************************************
+
+        //*********************************************************************************
+        //READ FROM FILE
+        //*********************************************************************************
+        document.getElementById('fileInput').addEventListener('change', handleFileSelect);
+
+        function handleFileSelect(event) {
+
+
+            //*********************************************************************************
+            //*********************************************************************************
+            //*********************************************************************************
+            //var cells = document.querySelectorAll('td[id="black"]');
+            let cells = document.querySelectorAll('td[data-js-id="streakOutput"]');
+            cells.forEach(function (cell) {
+                cell.textContent = '';
+            });
+            //*********************************************************************************
+            //*********************************************************************************
+            //*********************************************************************************
+
+
+
+            const fileInput = event.target;
+            const file = fileInput.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    const fileContent = e.target.result;
+                    processFileContent(fileContent);
+                };
+
+                reader.readAsText(file);
+            }
+        }
+
+        function processFileContent(content) {
+            // Split the content into lines
+            const lines = content.split(/\r\n|\n/);
+
+            // Process each line
+            lines.forEach(line => {
+                console.log(line);
+
+                // Find the element with the corresponding number
+                const element = document.querySelector(`[onclick*="buttonClick(${line},"]`);
+
+                // Check if the element is found
+                if (element) {
+                    // Extract the other three arguments from the onclick attribute
+                    const onclickAttribute = element.getAttribute('onclick');
+                    const args = /buttonClick\((\d+), '(\w+)', '(\w+)', '(\w+)'\)/.exec(onclickAttribute);
+
+                    if (args && args.length === 5) {
+                        // Extracted arguments
+                        const [, number, color, position1, position2] = args;
+
+                        // Trigger the click event with all four arguments
+                        buttonClick(Number(number), color, position1, position2);
+                    } else {
+                        console.log(`Invalid onclick attribute: ${onclickAttribute}`);
+                    }
+                } else {
+                    console.log(`Element with number ${line} not found`);
+                }
+            });
+        }
+
     </script>
 
 </body>
